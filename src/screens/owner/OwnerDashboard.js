@@ -34,7 +34,10 @@ export default function OwnerDashboard({ navigation }) {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView 
+      contentContainerStyle={styles.container}
+      showsVerticalScrollIndicator={true}
+    >
       {/* Header with Title & Lock/Logout Button */}
       <View style={styles.header}>
         <View>
@@ -172,7 +175,7 @@ export default function OwnerDashboard({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flexGrow: 1, backgroundColor: COLORS.background, padding: 20 },
+  container: { flexGrow: 1, backgroundColor: COLORS.background, padding: 20, paddingBottom: 60 },
   header: { marginTop: 35, marginBottom: 25, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   title: { fontSize: 24, fontWeight: '900', color: COLORS.primary, letterSpacing: 2 },
   subtitle: { fontSize: 12, color: COLORS.textSecondary, marginTop: 2, fontWeight: '600' },

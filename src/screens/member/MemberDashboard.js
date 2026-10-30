@@ -204,7 +204,10 @@ export default function MemberDashboard({ route, navigation }) {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView 
+      contentContainerStyle={styles.container}
+      showsVerticalScrollIndicator={true}
+    >
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={pickImageAndUpload} style={styles.profileBadgeContainer}>
@@ -381,7 +384,7 @@ export default function MemberDashboard({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flexGrow: 1, backgroundColor: COLORS.background, padding: 20 },
+  container: { flexGrow: 1, backgroundColor: COLORS.background, padding: 20, paddingBottom: 60 },
   header: { flexDirection: 'row', alignItems: 'center', marginTop: 35, marginBottom: 20 },
   profileBadgeContainer: { width: 48, height: 48, borderRadius: 24, overflow: 'hidden', marginRight: 12, borderWidth: 1, borderColor: COLORS.primary },
   profileAvatar: { width: '100%', height: '100%' },
@@ -435,7 +438,7 @@ const styles = StyleSheet.create({
   qrMemberName: { color: COLORS.textPrimary, fontSize: 18, fontWeight: '900', marginTop: 10 },
   qrMemberMeta: { color: COLORS.textSecondary, fontSize: 12, marginTop: 4 },
   label: { fontSize: 11, color: COLORS.textMuted, fontWeight: '800', marginBottom: 6 },
-  input: { backgroundColor: COLORS.inputBackground, borderWidth: 1, borderColor: COLORS.border, borderRadius: SIZES.radiusMd, padding: 12, color: COLORS.textPrimary, fontSize: 15, marginBottom: 15 },
+  input: { backgroundColor: COLORS.inputBackground, borderWidth: `1`, borderColor: COLORS.border, borderRadius: SIZES.radiusMd, padding: 12, color: COLORS.textPrimary, fontSize: 15, marginBottom: 15 },
   modalBtnRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 },
   modalBtn: { flex: 1, height: 44, borderRadius: SIZES.radiusMd, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5 },
   payBtn: { backgroundColor: '#FF3B3020', borderWidth: 1, borderColor: COLORS.primary, padding: 12, borderRadius: 8, alignItems: 'center' },
